@@ -1,0 +1,14 @@
+*{
+    background-color: #f992a6;
+}
+.B1{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(135deg,#71b7e6,#9b59b6);
+}
+
+.container{
+    background-color: #f992a6;;
+}
