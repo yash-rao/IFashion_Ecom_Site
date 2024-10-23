@@ -1,0 +1,113 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+	<!-- <div class="row">
+		{% for product in products %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{product.imageURL}}">
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong></h6>
+				<hr>
+
+				<button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+				
+				<a class="btn btn-outline-success" href="#">View</a>
+				<h4 style="display: inline-block; float: right"><strong>${{product.price}}</strong></h4>
+
+			</div>
+		</div>
+		{% endfor %}
+	</div> -->
+	<div class="header">
+		<img src="{% static 'images/home.png' %}" alt="" />
+	</div>
+	<section class="offer">
+		<div class="row">
+		 
+		  <div class="col-md-6">
+			<div class="subscribe" >
+			  <h4 class="title" style="color: grey;">Ifashion Exclusive</h4>
+			  <p style="font-size:1.5rem;">
+				By understanding the type of body shapes and what styles complement and flatter particular body shape,  everyone surely can work with their body to give off amazing looks
+
+			  </p>
+			  <a href="{% url 'kys' %}" target="_blank" rel="noopener noreferrer">Best Suit</a>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+		
+	  
+	  
+	
+	  
+	  <!-- Offer section -->
+	  
+	  
+	
+		
+	  
+<!-- footer section start -->
+<footer id="footer">
+	<div class="footer2">
+		<div class="row">
+			<div class="col-md-3">
+			
+				<h1 class="title" style="color: rgb(74, 71, 71);">IFASHION</h1>
+
+			</div>
+			<div class="col-md-3">
+				<div class="useful-link">
+					<h2>Useful Links</h2>
+					
+					<div class="use-links">
+						<li><a href="{% url 'store' %}"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+						<li><a href="{% url 'kys' %}"><i class="fa-solid fa-angles-right"></i> Know your shape</a></li>
+						<li><a href="{% url 'shop' %}"><i class="fa-solid fa-angles-right"></i> Store</a></li>
+						<li><a href="{% url 'cart' %}"><i class="fa-solid fa-angles-right"></i> Cart</a></li>
+					</div>
+				</div>
+
+			</div>
+		 
+			<div class="col-md-3">
+				<div class="address">
+					<h2>Contacts</h2>
+					
+					<div class="address-links">
+						<li class="address1"><i class="fa-solid fa-location-dot"></i> Gandhinagar, Gujarat</li>
+						   <li><i class="fa-solid fa-phone"></i> +91 7984433478</a></li>
+						   <li><i class="fa-solid fa-envelope"></i> narendraparihar5196@gmail.com</a></li>
+					</div>
+				</div>
+			</div>
+		  
+		</div>
+	</div>
+
+</footer>
+<!-- footer section end -->
+<!-- footer copy right section start -->
+<section id="copy-right">
+	<div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+		
+	 &copy;	Ifashion 2022 
+
+
+	</div>
+
+</section>
+<!-- footer copy right section end -->
+	
+
+	 
+	  <!-- js file -->
+	  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock content %}
+
+

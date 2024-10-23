@@ -1,0 +1,100 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content%}
+<div  style="display: flex; height:100vh;justify-content:center; align-items: center; background:#f992a6;" >
+    
+
+    <div class="kys-main" >
+        <div class="slider" Style="width:94%; height:100%; margin:30px; border:5px solid; border-radius:20px;text-align: center; justify-items: center;">
+	  
+            <h2>By understanding the type of body shapes and what styles complement and flatter 
+                particular body shape, everyone surely can work with their body to give off amazing looks</h2>
+            <!-- <button class="btn btn-success">Know Your Shape</button> -->
+          </div>
+    <div class="title" style="font-size:25px; font-weight:800; text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;color:black">Get Best Suits</div>
+    <br>
+    <br>
+    <!-- onsubmit="return validate()" -->
+    <form>
+       
+           <div class="form-group row">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg Shoulder">Shoulder</label>
+            <div  class="col-sm-10 ">
+              <input id="shuolder1" type="number" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter Shoulder length in cm" required>
+            </div>
+          </div>
+          <br>
+          <div class="form-group row">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg Bust">Bust</label>
+            <div class="col-sm-10">
+              <input id="bust1" type="number" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter Bust length in cm" required>
+            </div>
+          </div>
+          <br>
+          <div class="form-group row">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg Waist">Waist</label>
+            <div class="col-sm-10">
+              <input id="waist1" type="number" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter Waist length in cm" required>
+            </div>
+          </div>
+          <br>
+          <div class="form-group row">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg Hips">Hips</label>
+            <div class="col-sm-10">
+              <input id="hips1" type="number" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Enter Hips length in cm" required>
+            </div>
+          </div>
+<br>
+          <div class="col-auto" style="text-align: center;">
+            <input type="button" class="btn btn-primary mb-2" onclick="validate()" value="Submit">
+          </div>
+      </form>
+      <a href="{% url 'triangle' %}" id="triangle" > click here for get outfits best suit on you(triangle)</a>
+      <a href="{% url 'hourglass' %}" id="hourglass" > click here for get outfits best suit on you(hourglass)</a>
+      <a href="{% url 'inverted-triangle' %}" id="inverted-triangle" > click here for get outfits best suit on you(inverted triangle)</a>
+      <a href="{% url 'rectangle' %}" id="rectangle" > click here for get outfits best suit on you(rectangle)</a>
+      <a href="{% url 'apple' %}" id="apple" > click here for get outfits best suit on you(apple)</a>
+</div>
+<script>
+
+  function validate(){
+    // alert("Hi");
+    // e.preventDefault();
+      console.log("On submit");
+      var shoulder = document.querySelector('#shuolder1').value;
+      var bust = document.querySelector('#bust1').value;
+      var waist=document.querySelector('#waist1').value;
+      var hip= document.querySelector('#hips1').value;
+      // alert(shoulder);
+
+      if(shoulder>100 || bust>100 || waist> 150 || hip > 250){
+        alert("please enter proper measurements")
+        return
+      }
+      if((hip-bust) >15){
+        console.log('triangle')
+        
+        document.getElementById('triangle').style.display="block";
+      }
+      else if(Math.abs(hip-bust)<10 && (waist-hip)>=20){
+        document.getElementById('hourglass').style.display="block";
+        console.log('hourglass')
+      }else if((bust-hip)>=15 && Math.abs(waist-hip)<10){
+        document.getElementById('inverted-triangle').style.display="block";
+        console.log('inverted triangle')
+      }else if(Math.abs(waist-hip)<5 && Math.abs(bust-waist)<5){
+        console.log('rectangle')
+        document.getElementById('rectangle').style.display="block";
+      }else{
+        console.log('apple')
+        document.getElementById('apple').style.display="block";
+      }
+     
+  }
+
+</script>
+
+</div>
+{% endblock %}

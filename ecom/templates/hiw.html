@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+{% block content%}
+
+<section class="fashion-trends">
+    <div class="fashion-box">
+        <div class="title-style text-center">
+          <h1>How to Measure</h1>
+        </div>
+       
+      </div>
+    
+
+    <ul class="flex-container">
+        <li class="flex-item">
+     
+                    <h5 class="card-title" >Shoulder</h5>
+                    <p class="card-text">Loosely wrap the tape around the very tops of your shoulders, at their broadest point above your shoulder blades. It’s easy for the tape to slip off at this spot, so fair warning, a second set of hands could be useful.</p>
+    
+        </li>
+        <li class="flex-item">
+                 <h5 class="card-title">Bust</h5>
+                 <p class="card-text">Wrap the tape around the fullest part of your bust. Hold it snugly enough that it stays in place, but not so tight that it’s compressing your chest. </p>     
+        </li>
+        <li class="flex-item">
+                    <h5 class="card-title">Waist</h5>
+                    <p class="card-text">This can be a little confusing, as your natural waist is different from where the waistband of your pants generally hits. You’re actually looking for the narrowest part of your waist, which is usually above the belly button.</p>    
+        </li>
+        <li class="flex-item">
+                    <h5 class="card-title">Hips</h5>
+                    <p class="card-text">As with your shoulders and bust, you’re looking for the fullest point. You’ll want to wrap the tape below your hip bones, around your hips</p>
+               
+        </li>
+       
+      </ul>
+  </section>
+
+{% endblock %}
